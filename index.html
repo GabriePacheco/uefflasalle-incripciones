@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incripciones Abiertas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <section>
+        <div class="logo">
+            <img src="logo.png" alt="Logo La Salle Febrescordero">
+        </div>
+        <div class="circulo"></div>
+        <div class="texto">
+            <h3 class="text-white">Inscripciones</h3>
+            <h2 class="text-secondary">ABIERTAS</h2>
+            <p class="text-white">AÑO LECTIVO 2022 - 2023</p>
+            <button id="toggle" class="btn bg-secondary"> Conoce Más </button>
+        </div>
+        <div class="menu">
+            <li style="--i:0;" class="bg-secondary">
+                <a href="#" class="text"><span>Niveles</span> <span>Educativos</span></a>
+                <div class="content">
+                    <strong>Ofeta Educativa</strong>
+                    <ul>
+                        <ol>Inicial (3 a 4 años)</ol>
+                        <ol>Inicial II (4 a 5 años )</ol>
+                        <ol>Básica Elemental</ol>
+                        <ol>Básica Media</ol>
+                        <ol>Básica superior</ol>
+                        <ol>Bachillerato</ol>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li style="--i:1;" class="bg-secondary">
+                <a href="#">
+                    <span>Oferta</span> <span>Educativa</span>
+                </a>
+                <div class="content">
+                    <strong>Ofeta Educativa</strong>
+                    <ul>
+                        <ol>Modalida Presencial</ol>
+                        <ol>Modelo pedagógico: "Pedagogia Conceptual"</ol>
+                        <ol>Estimulación de neurofunciones </ol>
+                    </ul>
+                </div>
+
+
+            </li>
+
+            <li style="--i:2;" class="bg-secondary">
+                <a href="#">
+                    <span>Resolución </span> <span>de Costos</span>
+                </a>
+                <div class="content">
+
+                    <ul>
+                        <ol><b> Matrícula</b>
+                            <ul>
+                                <ol>Inicial y Básica $73.89 </ol>
+                                <ol>Bachillerato 76.05</ol>
+
+                            </ul>
+                        </ol>
+                        <ol> <b>Pensión</b>
+                            <ul>
+                                <ol>Inicial y Básica $118.22 </ol>
+                                <ol>Bachillerato 121.69</ol>
+
+                            </ul>
+                        </ol>
+
+                    </ul>
+                </div>
+
+            </li>
+
+            <li style="--i:3;" class="bg-secondary">
+                <a href="https://bit.ly/2Ncfza7">
+                    <span>Incribete </span> <span>aquí</span>
+
+                </a>
+                <div class="content">
+                    <strong>Llena el formulareio de incripcion aquí:</strong>
+                    <a href="https://bit.ly/2Ncfza7" class="text-white" target="_blank">
+                        <button>https://bit.ly/2Ncfza7</button>
+                    </a>
+
+                </div>
+            </li>
+
+
+            <li style="--i:4;" class="bg-secondary">
+                <a href="#">
+                    <span>Contactanos </span>        
+                </a>
+
+                <div class="content">
+                    <strong>Llena el formulareio de incripcion aquí:</strong>
+                    <a href="https://bit.ly/2Ncfza7" class="text-white" target="_blank">
+                        <button>https://bit.ly/2Ncfza7</button>
+                    </a>
+
+                </div>
+            </li>
+        </div>
+    </section>
+</body>
+<script>
+    var menu = document.querySelector('.menu');
+    var id = document.querySelector('#toggle');
+
+    id.addEventListener('click', function () {
+        menu.classList.toggle('active');
+
+    });
+
+
+
+</script>
+
+
+</html>
