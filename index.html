@@ -16,6 +16,7 @@
         </div>
         <div class="circulo"></div>
         <div class="texto">
+
             <h3 class="text-white">Inscripciones</h3>
             <h2 class="text-secondary">ABIERTAS</h2>
             <p class="text-white">AÑO LECTIVO 2022 - 2023</p>
@@ -98,14 +99,15 @@
 
             <li style="--i:4;" class="bg-secondary">
                 <a href="#">
-                    <span>Contactanos </span>        
+                    <span>Contactanos </span>
                 </a>
 
                 <div class="content">
-                    <strong>Llena el formulareio de incripcion aquí:</strong>
-                    <a href="https://bit.ly/2Ncfza7" class="text-white" target="_blank">
-                        <button>https://bit.ly/2Ncfza7</button>
+                    <strong>Contactanos:</strong>
+                    <a href="https://lasallefebrescordero.edu.ec" class="text-white" target="_blank">
+                        <button>Página principal</button>
                     </a>
+                    Lamanos: 0998611224
 
                 </div>
             </li>
@@ -113,13 +115,24 @@
     </section>
 </body>
 <script>
+
+
     var menu = document.querySelector('.menu');
-    var id = document.querySelector('#toggle');
+    var button = document.querySelector('#toggle');
+    var plus = document.getElementById('plus');
 
-    id.addEventListener('click', function () {
+
+
+    button.addEventListener('click', function () {
         menu.classList.toggle('active');
-
+        if (menu.classList.contains('active')) {
+            button.innerHTML = 'Cerrar';
+        } else {
+            button.innerHTML = 'Conoce Más';
+        }
     });
+
+
 
 
 
