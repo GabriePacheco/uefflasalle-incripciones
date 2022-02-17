@@ -24,6 +24,10 @@ section {
     overflow: hidden;
 } 
 
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
 .text-primary {
     color: #25346cff;
 }
@@ -192,24 +196,28 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 200px;
+        width: 220px;
         height: 200px;
         transform-origin: left;
         transform: rotate(calc(166deg / -4 * var(--i))) translate(calc(-200px - var(--i) * 2 * -3px ), calc(-100px - var(--i) * 2 * -3px ));
       
     }
+
+    .menu li:hover .content:nth-child(3) {
+        transform-origin: right ;
+        transform: translate(-250px, -280px )  rotate(calc(166deg / -4 * var(--i)));
+    }
+
+
+
     .menu li:hover .content a{
-    
+        color: #e9b21eff;
         transform: rotate(0deg);
-    
     }
     .menu.active li {
            transform: rotate(calc(166deg / 4 * var(--i)));
     }
 }
-
-
-
 
 #toggle {
     z-index: 2;
