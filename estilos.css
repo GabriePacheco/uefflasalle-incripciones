@@ -184,8 +184,8 @@ section {
         background-color: #25346cff;
         padding: 1em;
         animation: fadeIn 0.5s;
-        font-family: 1em;
-        font-weight: lighter;
+        font-size: 0.9em;
+ 
         border-radius: 20%;
     }
     
@@ -203,16 +203,20 @@ section {
       
     }
 
-    .menu li:hover .content:nth-child(3) {
-        transform-origin: right ;
-        transform: translate(-250px, -280px )  rotate(calc(166deg / -4 * var(--i)));
+    .menu li:hover .content strong,
+    .menu li:hover .content b {
+        font-size: 1.1em;
+        color: #e9b21eff;
+        margin-bottom: 0.8em;
+
     }
 
+   
 
 
     .menu li:hover .content a{
-        color: #e9b21eff;
-       
+        color: #e9b21eff;    
+        font-weight: normal;
         transform: rotate(0deg);
     }
     .menu.active li {
