@@ -20,16 +20,21 @@
             <h3 class="text-white">Inscripciones</h3>
             <h2 class="text-secondary">ABIERTAS</h2>
             <p class="text-white">AÑO LECTIVO 2022 - 2023</p>
-            <button id="toggle" class="btn bg-secondary"> Conoce Más </button>
+            <button id="toggle" class="btn bg-secondary">
+                Conoce Más
+                <i class="bi bi-three-dots-vertical d-sx"></i>
+            </button>
         </div>
         <div class="menu">
             <li style="--i:0;" class="bg-secondary">
-                <a href="#" class="text"><span>Niveles</span> <span>Educativos</span></a>
+                <a href="#" class="text">
+                    <i class="bi bi-journal-text d-sx-only"></i>
+                    <span>Niveles</span> <span>Educativos</span></a>
                 <div class="content">
-                    <strong>Niveles de Educativos</strong>
+                    <strong> Niveles de Educativos</strong>
                     <ul>
-                        <ol>Inicial (3 a 4 años)</ol>
-                        <ol>Inicial II (4 a 5 años )</ol>
+                        <ol>Inicial II A (3 a 4 años)</ol>
+                        <ol>Inicial II B (4 a 5 años )</ol>
                         <ol>Básica Elemental</ol>
                         <ol>Básica Media</ol>
                         <ol>Básica Superior</ol>
@@ -41,6 +46,7 @@
 
             <li style="--i:1;" class="bg-secondary">
                 <a href="#" class="text">
+                    <i class="bi bi-bookmark-star d-sx-only"></i>
                     <span>Oferta</span> <span>Educativa</span>
                 </a>
                 <div class="content">
@@ -57,6 +63,7 @@
 
             <li style="--i:2;" class="bg-secondary">
                 <a href="#">
+                    <i class="bi bi-tags d-sx-only"></i>
                     <span>Resolución </span> <span>de Costos</span>
                 </a>
                 <div class="content">
@@ -84,54 +91,38 @@
 
             <li style="--i:3;" class="bg-secondary">
                 <a href="https://bit.ly/2Ncfza7">
+                    <i class="bi bi-door-open d-sx-only"></i>
                     <span>Inscribete </span> <span>aquí</span>
 
                 </a>
 
-                <!-- <div class="content">
-                    <strong>1. Llena el formulario de inscripción aquí:</strong>
-                    <a href="https://inscripciones.febrescordero.lasalle.ec/" target="_blank">
-                        <h3 class="text-secondary mb-2"> Ingresa aquí
-                    </a>
-                    
-
-                </div>
-
-
-
-                <div class="content">
-                    <strong>Video Tutorial</strong>
-                    <a href="https://bit.ly/2Ncfza7" class="text-white" target="_blank">
-                        <h1 class="text-secondary"><i class="bi bi-play"></i></h1>
-                    </a>
-                </div> -->
-
                 <div class="mini-content">
-                   
-                       <ol style="--y:0;" ><span> <strong>1.</strong> Llena el Formulario  <a href="https://bit.ly/2Ncfza7" target="blank">aquí</a> </span>  </ol>
-                       <ol style="--y:1;" ><span> <strong>2.</strong> Pruebas psicológicas  </span>  </ol>
-                       <ol style="--y:2;" ><span> <strong>3.</strong> Entrevista   </span>  </ol>
-                       <ol style="--y:3;" ><span> <strong>4.</strong> Asignación de cupos  </span>  </ol>
-                       <ol style="--y:4;" ><span> <strong>5.</strong> Matriculación  </span>  </ol>
-                       
-                   
+                    
+                        
+                    <strong class="d-sx-only">Inscribete</strong>
+
+                    <ol style="--y:0;"><span> <strong>1.</strong> Llena el Formulario <a href="https://bit.ly/2Ncfza7"
+                                target="blank">aquí</a> </span> </ol>
+                    <ol style="--y:1;"><span> <strong>2.</strong> Pruebas psicológicas </span> </ol>
+                    <ol style="--y:2;"><span> <strong>3.</strong> Entrevista </span> </ol>
+                    <ol style="--y:3;"><span> <strong>4.</strong> Asignación de cupos </span> </ol>
+                    <ol style="--y:4;"><span> <strong>5.</strong> Matriculación </span> </ol>
                 </div>
-
-
             </li>
 
 
             <li style="--i:4;" class="bg-secondary">
                 <a href="#">
+                    <i class="bi bi-envelope d-sx-only"></i>  
                     <span>Contáctanos </span>
                 </a>
 
                 <div class="content">
                     <strong>Solicita información</strong>
-                    <a href="https://lasallefebrescordero.edu.ec" >
+                    <a href="https://lasallefebrescordero.edu.ec">
                         Página Web
                     </a>
-                    
+
                     <span class="bi bi-phone"></span>(02) 3215987
                     <span class="bi bi-whatsapp"></span>0998611224
 
@@ -142,25 +133,43 @@
 </body>
 <script>
 
+    // mover scroll en dispositivos moviles
+    window.onbeforunload = function () {
+        window.scrollTo(0, 100);
+    }
 
     var menu = document.querySelector('.menu');
     var button = document.querySelector('#toggle');
     var plus = document.getElementById('plus');
 
-
-
     button.addEventListener('click', function () {
         menu.classList.toggle('active');
         if (menu.classList.contains('active')) {
-            button.innerHTML = 'Cerrar';
+            button.innerHTML = ` Cerrar <i class="bi bi-x"></i>`;
         } else {
-            button.innerHTML = 'Conoce Más';
+            button.innerHTML = ' Conoce Más <i class="bi bi-three-dots-vertical"></i>';
         }
     });
 
+    var items = document.querySelectorAll('.menu li');
 
 
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('touchend', function () {
+            for (let j = 0; j < items.length; j++) {
+                items[j].classList.remove('active');
+            }
 
+            items[i].classList.add('active');
+
+        });
+    }
+
+    document.addEventListener('touchstart', function (e) {
+        for (let j = 0; j < items.length; j++) {
+            items[j].classList.remove('active');
+        }
+    });
 
 </script>
 
