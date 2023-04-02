@@ -1,0 +1,19 @@
+{
+  "name": "uefflasalle-incripciones",
+  "version": "1.2.0",
+  "description": "Landing page para la pagina de inscripciones de la unidad educativa febrescordero ",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabriePacheco/uefflasalle-incripciones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabriePacheco/uefflasalle-incripciones/issues"
+  },
+  "homepage": "https://github.com/GabriePacheco/uefflasalle-incripciones#readme"
+}
